@@ -5,53 +5,272 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-image: url("../images/background.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+h2 {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+h3 {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
 .flex-row {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.info {
+.flex-row > div {
     width: 100%;
-    padding: 5px 25px;
-    background-color: aliceblue;
+}
+
+.info {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
     border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: #333;
+}
+
+.info:hover {
+    background-color: rgba(41, 152, 236, 0.5);
+    cursor: pointer;
+}
+
+.info > div {
+    height: 100%;
+    padding: 5px 10px;
+    border-radius: 3px 0 0 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info img {
+    width: 20px;
+}
+
+.info p {
+    width: 100%;
 }
 
 main {
     width: 100%;
     height: 100dvh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #eee;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .container {
-    max-width: 800px;
+    width: 800px;
     display: flex;
     flex-direction: column;
-    background-color: #ddd;
+    border-radius: 8px;
+    border: 1px solid #999;
+    background-color: rgba(221, 221, 221, 0.2);
+    backdrop-filter: blur(5px);
 }
 
 .poke-all-info {
     display: flex;
-    gap: 20px;
 }
 
 .poke-all-info > div {
     width: 50%;
 }
 
+/* POKEMON MAIN IMAGE */
+
 .poke-img {
     padding: 50px;
-    background-color: #ccc;
+    border-radius: 8px 0 0 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poke-img:hover {
+    background-color: rgba(41, 152, 236, 0.5);
+    cursor: pointer;
 }
 
 .poke-img img {
     width: 100%;
 }
 
+.poke-hidden {
+    filter: brightness(0);
+}
+
+/* POKEDEX ENTRY */
+
+.pokedex-entry > p {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
 .poke-details {
-    padding: 25px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* TYPES */
+
+.type-default > div {
+    background-color: #222;
+}
+
+.type-normal > div {
+    background-color: #9fa19f;
+}
+
+.type-fire > div {
+    background-color: #e62829;
+}
+
+.type-water > div {
+    background-color: #2980ef;
+}
+
+.type-electric > div {
+    background-color: #fac000;
+}
+
+.type-grass > div {
+    background-color: #3fa129;
+}
+
+.type-fighting > div {
+    background-color: #ff8000;
+}
+
+.type-poison > div {
+    background-color: #9141cb;
+}
+
+.type-ground > div {
+    background-color: #915121;
+}
+
+.type-flying > div {
+    background-color: #81b9ef;
+}
+
+.type-psychic > div {
+    background-color: #ef4179;
+}
+
+.type-bug > div {
+    background-color: #91a119;
+}
+
+.type-rock > div {
+    background-color: #afa981;
+}
+
+.type-ghost > div {
+    background-color: #704170;
+}
+
+.type-ice > div {
+    background-color: #3dcef3;
+}
+
+.type-dragon > div {
+    background-color: #5060e1;
+}
+
+.type-dark > div {
+    background-color: #624d4e;
+}
+
+.type-steel > div {
+    background-color: #60a1b8;
+}
+
+.type-fairy > div {
+    background-color: #ef70ef;
+}
+
+.type-stellar > div {
+    background-color: #40b5a5;
+}
+
+/* ANSWER */
+
+.answer {
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.answer input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: 1px solid #999;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu button {
+    padding: 10px 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #999;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+
+.menu button:hover {
+    background-color: rgba(63, 161, 41, 0.5);
 }

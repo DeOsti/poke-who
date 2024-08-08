@@ -6,56 +6,74 @@
         <title>Quem é este Pokèmon?</title>
 
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <script src="./assets/js/pokeGetter.js"></script>
+        <script src="./assets/js/pokeGetter.js" defer></script>
     </head>
     <body>
         <main>
             <div class="container">
-                <div class="menu"></div>
                 <div class="poke-all-info">
                     <div class="poke-img">
-                        <img
-                            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-                            alt="quem é este pokèmon?"
-                        />
+                        <img src="./assets/images/default-pokemon.png" alt="quem é este pokèmon?" />
                     </div>
                     <div class="poke-details">
                         <div class="pokedex-entry">
                             <h2>Pokedex Entry</h2>
-                            <p>
-                                A strange seed was planted on its back at birth. The plant sprouts
-                                and grows with this POKéMON.
-                            </p>
+                            <p>-</p>
                         </div>
                         <div class="types">
                             <h2>Types</h2>
                             <div class="flex-row">
-                                <div class="type1 info">grass</div>
-                                <div class="type2 info">poison</div>
+                                <div class="info type-default">
+                                    <div>
+                                        <img src="./assets/images/default-icon.png" alt="-" />
+                                    </div>
+                                    <p>-</p>
+                                </div>
+                                <div class="info type-default">
+                                    <div>
+                                        <img src="./assets/images/default-icon.png" alt="-" />
+                                    </div>
+                                    <p>-</p>
+                                </div>
                             </div>
                         </div>
                         <div class="egg-groups">
                             <h2>Egg Groups</h2>
                             <div class="flex-row">
-                                <div class="egg1 info">monster</div>
-                                <div class="egg2 info">plant</div>
+                                <div class="info"><p>-</p></div>
+                                <div class="info"><p>-</p></div>
                             </div>
                         </div>
                         <div class="abilities">
                             <h2>Abilities</h2>
                             <div class="flex-row">
-                                <div class="ability1 info">overgrow</div>
-                                <div class="ability2 info">chlorophyll</div>
+                                <div class="info"><p>-</p></div>
+                                <div class="info"><p>-</p></div>
                             </div>
                         </div>
                         <div class="flex-row">
-                            <div class="height info">7</div>
-                            <div class="weight info">69</div>
-                            <div class="generation info">1</div>
+                            <div class="height">
+                                <h3>height</h3>
+                                <div class="info"><p>-</p></div>
+                            </div>
+                            <div class="weight">
+                                <h3>weight</h3>
+                                <div class="info"><p>-</p></div>
+                            </div>
+                            <div class="generation">
+                                <h3>generation</h3>
+                                <div class="info"><p>-</p></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <input type="text" placeholder="Digite aqui o nome do Pokèmon" />
+            </div>
+            <div class="container answer">
+                <input type="text" placeholder="Write your guess. Who is that pokemon?" />
+            </div>
+            <div class="menu">
+                <button class="reveal">Reveal Pokemon</button>
+                <button class="change">Change Pokemon</button>
             </div>
         </main>
     </body>
