@@ -117,7 +117,7 @@ main {
 }
 
 .poke-img:hover {
-    background-color: rgba(41, 152, 236, 0.5);
+    /* background-color: rgba(41, 152, 236, 0.5); */
     cursor: pointer;
 }
 

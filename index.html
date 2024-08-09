@@ -12,7 +12,7 @@
         <main>
             <div class="container">
                 <div class="poke-all-info">
-                    <div class="poke-img">
+                    <div id="image" class="poke-img click">
                         <img src="./assets/images/default-pokemon.png" alt="quem é este pokèmon?" />
                     </div>
                     <div class="poke-details">
@@ -23,13 +23,13 @@
                         <div class="types">
                             <h2>Types</h2>
                             <div class="flex-row">
-                                <div class="info type-default">
+                                <div id="type1" class="info click type-default">
                                     <div>
                                         <img src="./assets/images/default-icon.png" alt="-" />
                                     </div>
                                     <p>-</p>
                                 </div>
-                                <div class="info type-default">
+                                <div id="type2" class="info click type-default">
                                     <div>
                                         <img src="./assets/images/default-icon.png" alt="-" />
                                     </div>
@@ -40,29 +40,29 @@
                         <div class="egg-groups">
                             <h2>Egg Groups</h2>
                             <div class="flex-row">
-                                <div class="info"><p>-</p></div>
-                                <div class="info"><p>-</p></div>
+                                <div id="eggGroup1" class="info click"><p>-</p></div>
+                                <div id="eggGroup2" class="info click"><p>-</p></div>
                             </div>
                         </div>
                         <div class="abilities">
                             <h2>Abilities</h2>
                             <div class="flex-row">
-                                <div class="info"><p>-</p></div>
-                                <div class="info"><p>-</p></div>
+                                <div id="ability1" class="info click"><p>-</p></div>
+                                <div id="ability2" class="info click"><p>-</p></div>
                             </div>
                         </div>
                         <div class="flex-row">
-                            <div class="height">
-                                <h3>height</h3>
-                                <div class="info"><p>-</p></div>
+                            <div>
+                                <h3>height(m)</h3>
+                                <div id="height" class="info click"><p>-</p></div>
                             </div>
-                            <div class="weight">
-                                <h3>weight</h3>
-                                <div class="info"><p>-</p></div>
+                            <div>
+                                <h3>weight(kg)</h3>
+                                <div id="weight" class="info click"><p>-</p></div>
                             </div>
-                            <div class="generation">
+                            <div>
                                 <h3>generation</h3>
-                                <div class="info"><p>-</p></div>
+                                <div id="generation" class="info click"><p>-</p></div>
                             </div>
                         </div>
                     </div>
@@ -72,8 +72,8 @@
                 <input type="text" placeholder="Write your guess. Who is that pokemon?" />
             </div>
             <div class="menu">
-                <button class="reveal">Reveal Pokemon</button>
-                <button class="change">Change Pokemon</button>
+                <button id="reveal" class="click">Reveal Pokemon</button>
+                <button id="change" class="click">Change Pokemon</button>
             </div>
         </main>
     </body>
