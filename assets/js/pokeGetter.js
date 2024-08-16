@@ -64,8 +64,8 @@ async function setPokemon(pokemonIndex) {
     }
 
     // fetch pokemon info
-    const pokemon = await getPokemon(pokemonIndex);
-    const pokedex = await getPokedex(pokemonIndex);
+    const pokemon = await getPokemon(pokemonIndex).catch((er) => er.message);
+    const pokedex = await getPokedex(pokemonIndex).catch((er) => er.message);
 
     // Get random pokedex entry
     const entries = filterDexEntries(pokedex.flavor_text_entries);
@@ -93,6 +93,10 @@ async function setPokemon(pokemonIndex) {
 
 async function getPokemon(pokemonIndex) {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonIndex}`);
+    if (!res.ok) {
+        const message = `An error has ocurred: ${res.status}`;
+        throw new Error(message);
+    }
     const poke = await res.json();
     return poke;
 }
